@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{background-color: rgb(254, 237, 217);}
+
+.header{
+}
+
+
+.header .navbar{
+}
+
+.header .navbar  ul{
+   display: flex;
+   align-items: center;
+   list-style-type: none;
+   background-color: aquamarine;
+   margin: auto;
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+
+.gallery img{
+    height: 20rem ;
+}
