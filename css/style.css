@@ -74,6 +74,11 @@ main {
     min-height: 92vh;
 }
 
+.main-home{
+    display: flex;
+    flex-direction: row;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -125,6 +130,22 @@ main {
 .apresentacao p{
     background: white;
     margin-left: 50px;
+}
+
+.commissions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    padding: 1rem;
+}
+
+.commissions img{
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: .5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 footer {
