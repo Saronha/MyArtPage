@@ -42,3 +42,27 @@ const mobileNavbar = new MobileNavbar(
     ".lista-nav li",
 );
 mobileNavbar.init();
+
+
+//commission image slider
+//tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2
+
+new Swiper('.card-wrapper', {
+  // Optional parameters
+  loop: true,
+
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  // pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
