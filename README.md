@@ -1,4 +1,5 @@
-O projeto foi criado para avaliação do professor na disciplina de desenvolvimento de produtos multimédia. Visa servi de web site de arte pessoal para mim.
+O projeto foi criado para avaliação do professor na disciplina de desenvolvimento de produtos multimédia, o qual vai avaliar principalmente uso de flexbox, display grid, e responsividade com media queries.
+Futuramente, visa servir também de web site de arte pessoal para mim.
 
 ## Melhorias pra fazer:
 
