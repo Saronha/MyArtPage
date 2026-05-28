@@ -3,12 +3,8 @@ Futuramente, visa servir também de web site de arte pessoal para mim.
 
 ## Melhorias pra fazer:
 
-### Pagina home
-
-1. *melhorar o posicionamento das divs*
-
 ### Pagina parcerias
-1. inventar parcerias, ou trocar por "animações" e adicionar videos.
+1. desenvolver css
 
 ### Pagina commissions
 
@@ -17,6 +13,11 @@ Futuramente, visa servir também de web site de arte pessoal para mim.
 ### Pagina Jogos
 1. acrescentar algo
 
+### Header
+1. no menu sanduíche, quando você clica com o mouse, o cursor fica piscando.
+
 ### Pagina sobre
-1. mudar o texto (atualmente é só um copy paste da pagina do louie zhong)
-2. adicionar qualquer coisa embaixo
+1. mudar o texto (atualmente é só um copy paste da página do louie zhong)
+
+### Pagina home
+1. futuramente: deixar cada elemnto do grid com uma altura diferente, mas com a mesma largura.
