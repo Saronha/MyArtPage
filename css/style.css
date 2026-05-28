@@ -1,50 +1,54 @@
-/*importando fontes do google fonts*/
+/* ===== FONTES ===== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+
+/* ===== BASE ===== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Josefin Sans";
 }
 
-
-html{
+html {
     overflow-x: hidden;
 }
+
 body {
     background: linear-gradient(#ece3ee, #d5ddc5);
     color: rgb(171, 96, 96);
-    overflow-x: hidden; /*pra tirar a rolagem horizontal q o transform criou*/
+    overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
-
-a{
+a {
     color: rgb(132, 81, 147);
     text-decoration: none;
     transition: 0.3s;
 }
 
-a:hover{
+a:hover {
     opacity: 0.7;
 }
 
-nav{
+
+/* ===== HEADER ===== */
+
+nav {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: .3rem;
     align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, Sans-serif;
+    padding: 0.3rem;
+    height: 10vh;
     background: #ffffffc7;
-    height: 10vh; /*deixa a altura da header dependete da altura da altura da janela de visualização do usuário*/
+    font-family: Georgia, 'Times New Roman', Times, Sans-serif;
     box-shadow: 0px 0px 10px 5px rgba(32, 38, 32, 0.12);
     z-index: 120;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 1.6em;
@@ -52,47 +56,21 @@ nav{
     z-index: 110;
 }
 
-.logo img{
+.logo img {
     width: 60px;
     border-radius: 20%;
     margin: 2%;
 }
 
+/* menu sanduiche */
+/* tutorial: https://www.youtube.com/watch?v=bHRXRYTppHM */
 
-.lista-nav{
-    font-size: 1em;
-    list-style: none;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
-    background: #ffffffd8;
-    transform: translateX(125%); /*isso vai criar uma barra de rolagem horizontal que nao queremos, para consertar, tem q por overflow x hidden no body*/
-    transition: transform 0.3s ease-in;
-    box-shadow: 0px 0px 30px 40px #ffffffd8;
-    z-index: 100;
-    gap: 2rem;
+.menu-mobile {
+    display: block;
+    z-index: 110;
 }
 
-.lista-nav li{
-    margin-top: 8vh;
-    margin-right: 10vw;
-    opacity: 0; /*depois vai fazer a animação*/
-}
-
-.lista-nav li a:hover{
-    opacity: 1;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px 20px #ffffff;
-    border-radius: 20%;
-}
-
-.menu-mobile div{ /*construção de cada linha do menu sanduiche*/
+.menu-mobile div {
     width: 2em;
     height: 0.25em;
     background: rgb(132, 81, 147);
@@ -100,72 +78,92 @@ nav{
     border-radius: 15%;
 }
 
-.menu-mobile{
-    display: block; /*assim o flexbox automaticamente se ajusta*/
-    z-index: 110;
+.lista-nav {
+    list-style: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #ffffffd8;
+    box-shadow: 0px 0px 30px 40px #ffffffd8;
+    transform: translateX(125%);
+    transition: transform 0.3s ease-in;
+    z-index: 100;
 }
 
-.lista-nav.active{
-    transform: translateX(0);/*vai voltar a aparecer qnd tiver ativo com a classe q vamos adicionar ao javascript*/
+.lista-nav li {
+    margin-top: 8vh;
+    margin-right: 10vw;
+    opacity: 0;
+}
+
+.lista-nav li a:hover {
+    opacity: 1;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 20px #ffffff;
+    border-radius: 20%;
+}
+
+.lista-nav.active {
+    transform: translateX(0);
 }
 
 @keyframes navLinkFade {
-    from{
+    from {
         opacity: 0;
         transform: translateX(50px);
-    }to{
+    }
+    to {
         opacity: 1;
         transform: translateX(0px);
     }
-    
 }
 
-/*Media Querie HEADER*/
-
-@media (min-width: 750px){
-    .menu-mobile{
+/* header desktop */
+@media (min-width: 750px) {
+    .menu-mobile {
         display: none;
     }
-    
-    .lista-nav{
-        flex-direction: row;
+
+    .lista-nav {
         position: static;
+        flex-direction: row;
         width: auto;
         height: auto;
-        font-size: 1em;
-        list-style: none;  
-        display: flex;
-        z-index: 500;
-        transform: translateX(0);
-        box-shadow: none;
         background: transparent;
+        box-shadow: none;
+        transform: translateX(0);
+        gap: 0;
         margin-right: 1.5rem;
     }
-    
-    
-    .lista-nav li{
+
+    .lista-nav li {
         margin-top: 0;
         margin-right: 0;
+        margin-left: 1.5em;
         letter-spacing: 0.05rem;
-        margin-left: 1.5em; /*ESPAÇO ENTRE CADA ITEM DA LISTA*/
         opacity: 1;
     }
-    
-    
-    
 }
 
 
 /* ===== HOME ===== */
-/* Tutorial gradient overlay: https://www.youtube.com/watch?v=5CztcrXpfec */
-.main-home{
+/* tutorial gradient overlay: https://www.youtube.com/watch?v=5CztcrXpfec */
+
+.main-home {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-.main-home .img-container{
+.main-home .img-container {
     width: 100vw;
     height: 50vh;
     position: relative;
@@ -174,186 +172,177 @@ nav{
     align-items: center;
 }
 
-
-.main-home .img-container .gradient{
-    height: 100%;
-    width: 100%;
-    opacity: 70%;
-    background-image:
-    linear-gradient(to top, rgb(152, 150, 150), transparent);
+.main-home .img-container .gradient {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background-image: linear-gradient(to top, rgb(152, 150, 150), transparent);
 }
 
-.main-home .img-container img{
-    opacity: 100%;
-    height: 100%;
+.main-home .img-container img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
-}  
+}
 
-.main-home .img-container .texto-container{
+.main-home .img-container .texto-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     color: #ffffff;
     padding: 1rem;
     gap: 2.5vh;
 }
 
-.main-home .img-container .texto-container h1{
+.main-home .img-container .texto-container h1 {
     font-size: 3rem;
     text-align: center;
 }
 
-.main-home .img-container .texto-container p{
+.main-home .img-container .texto-container p {
     font-size: 1.1rem;
     text-align: center;
 }
 
-.main-home .img-container .texto-container .container-botoes{
+.main-home .img-container .texto-container .container-botoes {
     display: flex;
     gap: 5vw;
 }
-.main-home .img-container .texto-container .container-botoes .botao{
+
+.main-home .img-container .texto-container .container-botoes .botao {
+    display: flex;
+    align-items: center;
     color: #ffffff;
     background: #bcc3ad;
     border-radius: 50px;
-    padding: .6rem;
+    padding: 0.6rem;
     font-size: 1rem;
-    display: flex;
-    align-items: center;
-    box-shadow:  .2rem .2rem rgba(0, 0, 0, 0.05);
-    
+    box-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.05);
 }
 
-.main-home .trabalhos-recentes{
+.main-home .trabalhos-recentes {
     margin-top: 2rem;
 }
 
-.main-home .trabalhos-recentes .grid-container{
+.main-home .trabalhos-recentes .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.main-home .trabalhos-recentes .grid-container .grid-img-container{
-    margin-top: 2rem;
-    height: 30vh;
-    aspect-ratio: 4/5;
+.main-home .trabalhos-recentes .grid-container .grid-img-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.main-home .trabalhos-recentes .grid-container .grid-img-container .gradient{
-    height: 100%;
+    margin-top: 2rem;
+    height: 30vh;
     aspect-ratio: 4/5;
-    opacity: 70%;
-    background-image:
-    linear-gradient(to top, rgb(152, 150, 150), transparent);
-    position: absolute;
-    border-radius: 10%; 
 }
 
-.main-home .trabalhos-recentes .grid-container .grid-img-container img{
+.main-home .trabalhos-recentes .grid-container .grid-img-container .gradient {
+    position: absolute;
+    aspect-ratio: 4/5;
+    height: 100%;
+    opacity: 70%;
+    background-image: linear-gradient(to top, rgb(152, 150, 150), transparent);
+    border-radius: 10%;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container img {
     height: 100%;
     aspect-ratio: 4/5;
     border-radius: 10%;
     object-fit: cover;
 }
 
-.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container{
+.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    position: absolute;
     color: #ffffff;
     left: 1.5rem;
     bottom: 1.5rem;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
-.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container p{
-   
+.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container p {
     color: rgb(99, 144, 73);
     background: #d5ddc5;
     font-size: 0.95rem;
     padding: 0.5vh 2vw;
     width: fit-content;
-    border-radius: 50px;    
+    border-radius: 50px;
 }
 
-
-/* Media queries home*/
-@media (min-width: 500px){
-    .main-home .img-container .texto-container h1{
+/* home desktop */
+@media (min-width: 750px) {
+    .main-home .img-container .texto-container h1 {
         font-size: 4rem;
     }
 
-    .main-home .trabalhos-recentes .grid-container{
+    .main-home .trabalhos-recentes .grid-container {
         gap: 1.5rem;
     }
-    
 }
 
 
-/* ===== ABOUT ===== */
+/* ===== SOBRE ===== */
 
-
-.caixa-sobre{
+.caixa-sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10vh;
 }
 
-.caixa-sobre h1{  
+.caixa-sobre h1 {
     font-size: 3rem;
 }
 
-.apresentacao{
-    margin: 2rem;
+.apresentacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 900px;
+    margin: 2rem;
 }
 
-.apresentacao p{
+.apresentacao p {
     margin-left: 50px;
     font-size: 1.2rem;
     font-weight: 300;
 }
-.apresentacao img{
+
+.apresentacao img {
     width: 90%;
     max-width: 50vw;
     filter: drop-shadow(8px 8px 15px rgba(87, 100, 42, 0.35));
     transition: transform 0.3s ease;
 }
 
-.apresentacao img:hover{
+.apresentacao img:hover {
     transform: scale(1.05);
 }
 
-
-/*media queries about*/
-
-@media (min-width: 750px){
-    
-    .apresentacao{
-        display: flex;
+/* sobre desktop */
+@media (min-width: 750px) {
+    .apresentacao {
         flex-direction: row;
     }
-    
+
+    .apresentacao img {
+        width: 50vw;
+    }
 }
 
 
 /* ===== COMMISSIONS ===== */
-/*commission image slider
-tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2*/
+/* tutorial slider: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2 */
 
 .main-commissions {
     display: flex;
@@ -363,24 +352,24 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     min-height: 92vh;
 }
 
-.commissions{
+.commissions {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card-wrapper{
+.card-wrapper {
     max-width: 1200px;
     overflow: hidden;
 }
 
-.card-list .card-item{
+.card-list .card-item {
     list-style: none;
 }
 
-.card-list .card-item .card-link{
-    width: 100%;
+.card-list .card-item .card-link {
     display: block;
+    width: 100%;
     background-color: #ffffffc7;
     padding: 5%;
     border-radius: 12px;
@@ -390,17 +379,17 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     transition: 0.2s ease;
 }
 
-.card-list .card-item .card-link:hover{
+.card-list .card-item .card-link:hover {
     border-color: rgb(221, 197, 238);
 }
 
-.card-list .card-link .card-image{
+.card-list .card-link .card-image {
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
 }
 
-.card-list .card-link .badge{
+.card-list .card-link .badge {
     color: rgb(157, 174, 174);
     font-size: 0.95rem;
     margin: 16px 0 18px;
@@ -409,16 +398,16 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     border-radius: 50px;
 }
 
-.card-list .card-link .card-title{
+.card-list .card-link .card-title {
     font-size: 1.19rem;
-    color:rgb(132, 81, 147);
     font-weight: 600;
+    color: rgb(132, 81, 147);
 }
 
-.card-list .card-link .card-button{
+.card-list .card-link .card-button {
     height: 2.5rem;
     width: 2.5rem;
-    color: rgb(161, 155, 198);;
+    color: rgb(161, 155, 198);
     border-radius: 50%;
     margin: 30px 0 5px;
     background: none;
@@ -428,12 +417,13 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     transition: 0.4s ease;
 }
 
-.card-list .card-link:hover .card-button{
+.card-list .card-link:hover .card-button {
     color: white;
-    background: rgb(161, 155, 198);;
+    background: rgb(161, 155, 198);
 }
 
-/*===== MUSICA =====*/
+
+/* ===== MÚSICAS ===== */
 
 .main-musica {
     display: flex;
@@ -442,7 +432,9 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     justify-content: center;
     min-height: 92vh;
 }
-/*===== JOGOS =====*/
+
+
+/* ===== JOGOS ===== */
 
 .main-jogos {
     display: flex;
@@ -452,19 +444,53 @@ tutorail seguido: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae
     min-height: 92vh;
 }
 
+/* ===== PARCERIAS ===== */
+
+.main-parcerias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-parcerias .grid-parcerias{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main-parcerias .grid-parcerias .parceria-container{
+    display: flex;
+}
+
+.main-parcerias .grid-parcerias .parceria-container .img-container{
+    height: 30vh;
+    aspect-ratio: 1/2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-parcerias .grid-parcerias .parceria-container .img-container .gradient{
+    height: 100%;
+    aspect-ratio: 1/1;
+    opacity: 70%;
+    background-image:
+    linear-gradient(to top, rgb(152, 150, 150), transparent);
+    position: absolute;
+    border-radius: 10%; 
+}
+
+.main-parcerias .grid-parcerias .parceria-container .img-container img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
 /* ===== FOOTER ===== */
 
-
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #ffffffc7;
+    text-align: center;
+    padding: 1rem;
+    background: #ffffffc7;
 }
-/* ===== MEDIA QUERIES ===== */
-
-@media(max-width:960px){
-    .apresentacao img{
-        width: 50vw;
-    }
-}
-/* menu sanduiche*/
