@@ -8,7 +8,7 @@ Futuramente, visa servir também de web site de arte pessoal para mim.
 
 ### Pagina commissions
 
-1. *ajeitar a responsividade, deixar mobile first*
+1. melhorar tamanho da fontes
 
 ### Pagina Jogos
 1. acrescentar algo
