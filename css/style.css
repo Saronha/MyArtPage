@@ -428,9 +428,26 @@ nav {
     align-items: center;
     justify-content: center;
     min-height: 92vh;
+    padding: 3rem 1rem;
+    gap: 0..5rem
+}
+
+.main-commissions h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--bordo);
+}
+.main-commissions p{
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--roxo);
+    opacity: 0.55;
+    margin-bottom: 2rem;
 }
 
 .commissions {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -470,7 +487,6 @@ nav {
 .card-list .card-link .badge {
     color: var(--verde-escuro);
     font-size: 0.95rem;
-    margin: 16px 0 18px;
     background: var(--verde-bg);
     width: fit-content;
     border-radius: 50px;
@@ -501,6 +517,16 @@ nav {
     background: var(--lilas);
 }
 
+/* desktop */
+@media (min-width: 750px) {
+    .commissions-titulo {
+        font-size: 3rem;
+    }
+
+    .card-wrapper {
+        max-width: 1200px;
+    }
+}
 
 /* ===== MÚSICAS ===== */
 

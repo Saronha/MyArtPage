@@ -51,8 +51,12 @@ new Swiper('.card-wrapper', {
   // Optional parameters
   loop: true,
 
-  slidesPerView: 3,
+  slidesPer: 1,
   spaceBetween: 20,
+
+  breakpoints:{
+    750: {slidesPerView:3}
+    },
 
   // pagination bullets
   pagination: {
