@@ -758,9 +758,9 @@ nav {
 }
 
 
-/* ===== PARCERIAS ===== */
+/* ===== GALERIA ===== */
 
-.main-parcerias{
+.main-galeria{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -787,195 +787,50 @@ nav {
     font-size: 2.2rem;
     line-height: 1.15;
     font-weight: 700;
-    text-transform: uppercase;
 }
 .hero p{
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-/*— grid serviços —*/
+/*— grid galeria —*/
 
-.grid-parcerias{
+.grid-galeria{
     width: 100%;
     max-width: 900px;
-    display: grid;
-    grid-template-columns: 1fr;
+    columns: 2;
     gap: 1.5rem;
 }
-
-.parceria-container{
-    display: flex;
-    flex-direction: column;
-    background: var(--branco-transparente);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(100, 60, 120, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+.grid-galeria img{
+    width: 100%;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 20px rgba(100, 60, 120, 0.13);
+    border-radius: 20px;
+    margin-bottom: 1rem;
 }
-
-.parceria-container:hover{
+    
+.grid-galeria img:hover{
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(100, 60, 120, 0.13);
-}
-
-.parceria-container .img-container{
-    width: 100%;
-    aspect-ratio: 16/9;
-    position: relative;
-    overflow: hidden;
-}
-
-.parceria-container .img-container .gradient{
-    position: absolute;
-    inset: 0;
-    background-image:var(--gradiente);
-    opacity: 60%;
-    z-index: 1;
-}
-
-.parceria-container .img-container img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.parceria-container:hover .img-container img {
-    transform: scale(1.04);
-}
-
-.parceria-container .texto-container {
-    padding: 1.25rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.parceria-container .texto-container h2 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--roxo);
-    letter-spacing: 0.02em;
-}
-
-.parceria-container .texto-container p {
-    font-size: 0.9rem;
-    color: var(--roxo);
-    line-height: 1.6;
-    font-weight: 300;
-}
-
-/* — lista de clientes — */
-.trabalhos {
-    width: 100%;
-    max-width: 900px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.trabalhos h2 {
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color:var(--roxo);
-}
-
-.trabalhos ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-}
-
-.trabalhos ul li {
-    font-size: 0.85rem;
-    color: var(--roxo);
-    background: var(--lilas-transparente);
-    border: 1px solid var(--roxo-claro);
-    border-radius: 50px;
-    padding: 0.35rem 1rem;
-    letter-spacing: 0.04em;
-}
-
-/* — CTA — */
-.ideia {
-    width: 100%;
-    max-width: 900px;
-}
-
-.ideia-container {
-    background: var(--lilas-transparente);
-    border: 1px solid var(--roxo-claro);
-    border-radius: 20px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.ideia-container h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--roxo);
-}
-
-.ideia-container p {
-    font-size: 0.95rem;
-    color: var(--roxo);
-    line-height: 1.65;
-    font-weight: 350;
-    max-width: 400px;
-}
-
-.ideia-container .botao a {
-    display: inline-block;
-    background: var(--roxo);
-    color: #fff;
-    padding: 0.65rem 1.75rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    transition: background 0.25s ease, transform 0.2s ease;
-}
-
-.ideia-container .botao a:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
 }
 
 /* — desktop — */
 @media (min-width: 750px) {
 
-    .parcerias-hero h1 {
+    .hero h1 {
         font-size: 3rem;
     }
 
-    .grid-parcerias {
-        grid-template-columns: 1fr 1fr;
+    .grid-galeria {
+        columns: 3;
         gap: 2rem;
     }
 
-    .parceria-container {
+    /*.galeria-container {
         flex-direction: column;
-    }
-
-    .parceria-container .img-container {
-        aspect-ratio: 4/3;
-    }
-
-    .ideia-container {
-        padding: 3.5rem 3rem;
-    }
+        aspect-ratio: 3/4;
+    }*/
 }
-
-
 
 /* ===== FOOTER ===== */
 
