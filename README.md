@@ -1,6 +1,9 @@
 O conteúdo dessas páginas é ilustrativo. Bem ilustrativo (além de babble pra encher linguiça tem ilusrações originais minhas lol).
 O projeto foi criado para avaliação do professor na disciplina de desenvolvimento de produtos multimédia, o qual vai avaliar principalmente uso de elementos semânticos, flexbox, CSS grid, e media queries para responsividade.
 
+## Acesse
+https://saronha.github.io/MyArtPage/
+
 
 ## Melhorias pra fazer:
 
