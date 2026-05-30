@@ -1,0 +1,108 @@
+/* ===== COMMISSIONS ===== */
+/* tutorial slider: https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2 */
+ 
+.main-commissions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 92vh;
+    padding: 3rem 1rem;
+    gap: 0..5rem
+}
+ 
+.main-commissions h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--bordo);
+}
+.main-commissions p{
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--roxo);
+    opacity: 0.55;
+    margin-bottom: 2rem;
+}
+ 
+.commissions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.card-wrapper {
+    max-width: 1200px;
+    overflow: hidden;
+}
+ 
+.card-list .card-item {
+    list-style: none;
+}
+ 
+.card-list .card-item .card-link {
+    display: block;
+    width: 100%;
+    background-color: var(--branco-transparente);
+    padding: 5%;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+ 
+.card-list .card-item .card-link:hover {
+    border-color: var(--lilas);
+}
+ 
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+ 
+.card-list .card-link .badge {
+    color: var(--verde-escuro);
+    font-size: 0.95rem;
+    background: var(--verde-bg);
+    width: fit-content;
+    border-radius: 50px;
+    border: 0.05rem solid var(--verde-escuro);
+}
+ 
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    font-weight: 600;
+    color: var(--roxo);
+}
+ 
+.card-list .card-link .card-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    color:var(--lilas);
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--lilas);
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+ 
+.card-list .card-link:hover .card-button {
+    color: white;
+    background: var(--lilas);
+}
+ 
+/* desktop */
+@media (min-width: 750px) {
+    .commissions-titulo {
+        font-size: 3rem;
+    }
+ 
+    .card-wrapper {
+        max-width: 1200px;
+    }
+}

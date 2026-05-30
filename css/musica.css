@@ -1,0 +1,69 @@
+/* ===== MÚSICAS ===== */
+
+.main-musica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 92vh;
+    padding: 2rem;
+    width: 100vw;
+    text-align: center;
+}
+
+.musica-cta{
+    width: 100%;
+}
+
+.cta-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    background: var(--lilas-transparente);
+    border: 1px solid var(--roxo-claro);
+    width: 100%;
+}
+
+.cta-container .botoes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-texto{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cta-botao{
+    background: var(--roxo);
+    color: var(--rosa-bg);
+    border: 1px solid var(--roxo);
+    padding: .5rem;
+    border-radius: 15px;
+}
+
+.botao-texto{
+    font-size: 1rem;
+}
+
+/* desktop */
+@media (min-width: 750px) {
+
+    .cta-container{
+        width: 25rem;
+    }
+
+    .main-musica .segunda-secao{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 900px;
+    }
+
+}

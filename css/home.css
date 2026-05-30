@@ -1,0 +1,192 @@
+/* ===== HOME ===== */
+/* tutorial gradient overlay: https://www.youtube.com/watch?v=5CztcrXpfec */
+
+.main-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-home .img-container {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-home .img-container .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background-image: var(--gradiente);
+}
+
+.main-home .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-home .img-container .hero {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 600px;
+    text-shadow: 2px 2px 4px var(--roxo);
+}
+
+.main-home .img-container .hero .eyebrow{
+    font-weight: 1000;
+}
+
+.main-home .img-container .hero h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main-home .img-container .hero p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.main-home .img-container .hero .container-botoes {
+    display: flex;
+    gap: 5vw;
+}
+
+.main-home .img-container .hero .container-botoes .botao {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background: var(--roxo);
+    border-radius: 15px;
+    padding: 0.6rem;
+    font-size: 1rem;
+    box-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.05);
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.main-home .img-container .hero .container-botoes .botao:hover{
+    background: var(--roxo-claro) ;
+    opacity: 90%;
+    transform: translateY(-2px);
+}
+
+/*—Trabalhos recentes—*/
+
+.main-home .trabalhos-recentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.trabalhos-recentes .texto-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.trabalhos-recentes .texto-container .espaco{
+    display: flex;
+    justify-content: space-between;
+}
+.trabalhos-recentes .texto-container .espaco a{
+   color: var(--bordo)
+}
+
+.main-home .trabalhos-recentes .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(100, 60, 120, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(100, 60, 120, 0.13);
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container .gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background-image: var(--gradiente);
+    border-radius: 16px;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.main-home .trabalhos-recentes .grid-container .grid-img-container .texto-container p {
+    color: var(--verde-escuro);
+    background:var(--verde-bg);
+    font-size: 0.95rem;
+    padding: 0.25rem;
+    width: fit-content;
+    border-radius: 50px;
+    border: 0.09rem solid var(--verde-escuro);
+}
+
+
+/* home desktop */
+@media (min-width: 600px) {
+
+    .main-home .trabalhos-recentes .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 750px) {
+    .main-home .img-container .texto-container h1 {
+        font-size: 4rem;
+    }
+}
+@media (min-width: 800px) {
+    .main-home .trabalhos-recentes .texto-container {
+       width: 70vw;
+    }
+    .main-home .trabalhos-recentes .grid-container {
+       width: 70vw;
+    }
+}
