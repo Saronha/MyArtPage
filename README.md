@@ -5,7 +5,7 @@ O conteúdo dessas páginas é ilustrativo. Bem ilustrativo (além de babble pra
 ## Melhorias pra fazer:
 
 ### Página música
-1. *melhorar botões*
+1. Melhorar o embend do Spotify que fica cortado.
 
 ### Pagina Galeria
 1. adicionar filtro de desenhos por categorias: Personagens, retratos, cenários etc...

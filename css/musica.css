@@ -4,66 +4,160 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 92vh;
-    padding: 2rem;
-    width: 100vw;
+    padding: 3rem 1.5rem 5rem;
+    gap: 4rem;
+}
+
+/* — hero — */
+
+.musica-hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.musica-hero h1 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    font-weight: 700;
     text-align: center;
 }
 
-.musica-cta{
-    width: 100%;
+.musica-hero p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--roxo-claro);
 }
 
-.cta-container{
+.segunda-secao{
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+hr{
+   border: none;
+   height: 1.5px; 
+   background: var(--roxo-claro);
+   opacity: 0.25;
+}
+
+/* — tracks — */
+
+.tracks-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: #ffffff72;
+    border: 1px solid var(--lilas);
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tracks-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.track-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;        /* permite que flex items encolham abaixo do conteúdo */
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.track-card:hover {
+    transform: translateY(-2px);
+}
+
+iframe{
+   width: 0;
+   flex: 1;
+}
+
+.track-number {
+    font-size: 0.75rem;
+    font-weight: 800;
+    min-width: 1.8rem;
+}
+
+/* — CTA — */
+
+.cta-card {
+    width: 100%;
+    background: var(--lilas-transparente);
+    border: 1px solid var(--roxo-claro);
+    border-radius: 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 15px;
-    background: var(--lilas-transparente);
-    border: 1px solid var(--roxo-claro);
-    width: 100%;
-}
-
-.cta-container .botoes{
-    display: flex;
     justify-content: center;
     gap: 1rem;
-}
-
-.cta-texto{
-    font-size: 2rem;
     text-align: center;
 }
 
-.cta-botao{
-    background: var(--roxo);
-    color: var(--rosa-bg);
+.cta-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.3;
+    text-shadow: 4px 4px 5px #4e346f77;
+}
+
+.cta-sub {
+    font-size: 1.25rem;
+    color: white;
+
+}
+
+.plataformas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.plataforma-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+    background: var(--roxo-claro);
     border: 1px solid var(--roxo);
-    padding: .5rem;
-    border-radius: 15px;
+    color: var(--branco-transparente);
 }
 
-.botao-texto{
-    font-size: 1rem;
+.plataforma-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* desktop */
-@media (min-width: 750px) {
+/* — desktop — */
 
-    .cta-container{
-        width: 25rem;
+@media (min-width: 900px) {
+    .tracks-section{
+        padding: 2rem;
     }
 
-    .main-musica .segunda-secao{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        max-width: 900px;
+    .segunda-secao{
+        flex-direction: row;
     }
 
+    iframe{
+        width: 100%;
+    }
 }
