@@ -13,7 +13,7 @@ O conteúdo dessas páginas é ilustrativo. Bem ilustrativo (além de babble pra
 
 ### Pagina commissions
 
-1. *melhorar tamanho e a disposição das fontes.*
+1. deixar as bordas laterais dos cards com "degradê", para irem sumindo aos poucos.
 
 ### Header
 1. no menu sanduíche, quando você clica com o mouse, o cursor fica piscando.

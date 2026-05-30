@@ -138,7 +138,7 @@ iframe{
     cursor: pointer;
     background: var(--roxo-claro);
     border: 1px solid var(--roxo);
-    color: var(--branco-transparente);
+    color: #fff;
 }
 
 .plataforma-btn:hover {
